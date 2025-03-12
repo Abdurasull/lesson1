@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Dilshod",
+        "surname": "Nazarov",
+        "phone": "+998 95 678 90 12"
+    },
+    {
+        "name": "Gulnora",
+        "surname": "Raximova",
+        "phone": "+998 99 789 01 23"
+    },
+    {
+        "name": "Ulug‘bek",
+        "surname": "Hamidov",
+        "phone": "+998 97 890 12 34"
+    },
+    {
+        "name": "Zarnigor",
+        "surname": "Sodiqova",
+        "phone": "+998 93 901 23 45"
+    },
+    {
+        "name": "Rustam",
+        "surname": "Bo‘riyev",
+        "phone": "+998 90 012 34 56"
+    }
+]

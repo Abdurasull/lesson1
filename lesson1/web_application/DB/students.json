@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Olimjon",
+        "surname": "Murtazayev",
+        "phone": "+998 97 123 45 67"
+    },
+    {
+        "name": "Shahnoza",
+        "surname": "Karimova",
+        "phone": "+998 90 234 56 78"
+    },
+    {
+        "name": "Javohir",
+        "surname": "Narzullayev",
+        "phone": "+998 93 345 67 89"
+    },
+    {
+        "name": "Madina",
+        "surname": "Ismoilova",
+        "phone": "+998 99 456 78 90"
+    },
+    {
+        "name": "Azizbek",
+        "surname": "Turg‘unov",
+        "phone": "+998 91 567 89 01"
+    }
+]

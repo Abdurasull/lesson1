@@ -16,6 +16,7 @@
         table{
             width: 50%;
             margin: auto;
+            margin-top: 20px;
             border-radius: 10px;
             background-color: antiquewhite;
             
@@ -51,7 +52,7 @@
     <header>
         <h1>O`qituvchilar </h1>
     </header>
-    <a href="/" class="bosh">Asosiy sahifa</a>
+    
     <table border="1" >
         <tr>
             <th>
@@ -67,20 +68,23 @@
                 Aloqaga chiqish
             </th>
         </tr>
+        {% for teacher in teachers %}
         <tr>
             <td>
-                Diyorbek
+                {{ teacher.name}}
             </td>
             <td>
-                Jumanov
+                {{ teacher.surname}}
             </td>
             <td>
-                +998 97 123 45 67
+                {{ teacher.phone}}
             </td>
             <td>
-                <a href="tel:+998971234567">Cal</a>
+                <a href="tel:{{teacher.phone}}">Cal📞</a>
             </td>
         </tr>
+        {% endfor %}
     </table>
+    <a href="/" class="bosh">Asosiy sahifa</a>
 </body>
 </html>

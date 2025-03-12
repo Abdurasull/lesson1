@@ -1,3 +1,5 @@
+from pprint import pprint
+import json
 from flask import Flask, render_template, url_for
 
 
@@ -20,12 +22,22 @@ def add_teacher():
 # talabalar to`yxatini ko`rish uchun
 @app.route("/student")
 def students():
-    return render_template("talaba.html")
+    students = []
+    with open("DB/students.json", "r", encoding="utf-8") as f:
+        students = json.loads(f.read())
+        
+        return render_template("talaba.html", talabalar=students)
+    
 
 # o`qituvchilar ruyxatini ko`rish uchun
 @app.route("/teacher")
 def teachers():
-    return render_template("teacher.html")
+    teachers = []
+    with open("DB/teachers.json", "r", encoding="utf-8") as f:
+        teachers = json.loads(f.read())
+        
+        return render_template("teacher.html", teachers=teachers)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
