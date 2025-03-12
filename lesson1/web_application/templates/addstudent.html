@@ -18,15 +18,7 @@
             display: flex;
             justify-content: center;
         }
-        table{
-            width: 50%;
-            margin: auto;
-            margin-top: 20px;
-            border-radius: 10px;
-            background-color: antiquewhite;
-            box-shadow: 0 0 10px 2px black
-
-        }
+        
         a{
             text-decoration: none;
             color: black;
@@ -50,7 +42,23 @@
             border: 2px solid yellow;
             box-shadow: 0 0 10px 2px gray;        
         }
-        
+        form{
+            width: 50%;
+            margin: auto;
+            margin-top: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0 10px 2px black;
+            display: flex;
+            flex-direction: column;
+        }
+        input{
+            margin: 5px;
+            padding: 5px;
+            border-radius: 5px;
+
+        }
     </style>
 </head>
 
@@ -58,29 +66,13 @@
     <header>
         <h1>Talaba qo`shish</h1>
     </header>
-    <table border="">
-        <tr>
-            <th>
-                Talabaning ismi
-            </th>
-        </tr>
-        <tr>
-            <td>
-                <a href="./puples/puple1.html" >Olimjon</a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="./puples/puple2.html" >Sherbek</a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="./puples/puple3.html" >Abdurasul</a>
-            </td>
-        </tr>
-    </table>
-    <a href="./index.html" class="bosh">Asosiy sahifa</a>
+    <form action="/student">
+        <input type="text" name="name" placeholder="Talaba ismini kiriting">
+        <input type="text" name="Fam" placeholder="Talaba familiyasini kiriting">
+        <input type="text" name="phon" placeholder="Talaba telefon nomirini kiriting">
+        <input type="submit" value="Qo`shish">
+    </form>
+    <a href="/" class="bosh">Asosiy sahifa</a>
     
 </body>
 </html>
