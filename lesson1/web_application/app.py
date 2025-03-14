@@ -1,6 +1,6 @@
 from pprint import pprint
 import json
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request
 
 
 app = Flask(__name__)
@@ -10,7 +10,7 @@ def home():
     return render_template("index.html")
 
 # talabalarni qo`shishni amalga oshirish uchun`
-@app.route("/addstudent")
+@app.route("/addstudent", methods=['GET', 'POST'])
 def add_students():
     return render_template("addstudent.html")
 
@@ -22,11 +22,21 @@ def add_teacher():
 # talabalar to`yxatini ko`rish uchun
 @app.route("/student")
 def students():
-    students = []
-    with open("DB/students.json", "r", encoding="utf-8") as f:
-        students = json.loads(f.read())
+    if request.method == 'POST':
+        students = []
+        pprint(request.form['name'])
+        with open("DB/students.json", "r", encoding="utf-8") as f:
+            students = json.loads(f.read())
+            
+            return render_template("talaba.html", talabalar=students)
+    else:
+        students = []
+        print("assalomu alaykum")
+        with open("DB/students.json", "r", encoding="utf-8") as f:
+            students = json.loads(f.read())
+            
+            return render_template("talaba.html", talabalar=students)
         
-        return render_template("talaba.html", talabalar=students)
     
 
 # o`qituvchilar ruyxatini ko`rish uchun
